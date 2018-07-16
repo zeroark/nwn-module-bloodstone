@@ -1,0 +1,14 @@
+version: '2.4'
+services:
+  HowardsLOTR-Classic-Prod:
+    container_name: nwnxee-prod
+    image: nwnxee/unified:latest
+    env_file: ./config/prodserver.env
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./server/:/nwn/home
+      - ./lua:/nwn/run/lua/
+    restart: always
+    ports:
+      - "5121:5121/udp"
