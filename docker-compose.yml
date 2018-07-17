@@ -1,14 +1,52 @@
 version: '2.4'
 services:
-  HowardsLOTR-Classic-Prod:
-    container_name: nwnxee-prod
+  db:
+    container_name: db
+    image: mariadb:latest
+    env_file: ./config/db.env
+    healthcheck:
+      # Change <Your password goes here> by what you put on the MYSQL_ROOT_PASSWORD variable on the db.env file.
+      # There should be no paces between -p and the value! (I.E: -ppassword is correct!)
+      test: ["CMD", "mysqladmin", "-ppassword", "ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+      start_period: 5s
+    volumes:
+      - mysql-data:/var/lib/mysql:rw
+      #- ./mysql-db:/docker-entrypoint-initdb.d         # TODO: Allow users to initialize their data using this.
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+
+  redis:
+    container_name: redis
+    image: healthcheck/redis:latest
+    command: ["redis-server", "--appendonly", "yes"]
+    hostname: redis
+    volumes:
+      - ./redis:/data
+    restart: unless-stopped
+
+  nwnxee-bloodstone:
+    container_name: bloodstone-prod
     image: nwnxee/unified:latest
-    env_file: ./config/prodserver.env
+    env_file: ./config/nwserver.env
     stdin_open: true
     tty: true
+    links:
+      - "db:db"
+      - "redis:redis"
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_started
     volumes:
       - ./server/:/nwn/home
       - ./lua:/nwn/run/lua/
     restart: always
     ports:
       - "5121:5121/udp"
+
+volumes:
+  mysql-data:
