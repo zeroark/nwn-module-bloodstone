@@ -4,9 +4,18 @@
     "version": "2.0.0",
     "tasks": [
         {
+            /*
             "label": "echo",
             "type": "shell",
             "command": "echo Hello"
+            */
+            "label": "buildNSS",
+            "type": "shell",
+            "command": "nwnsc.exe -l -o ./src/nss/*.nss",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
