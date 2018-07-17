@@ -61,6 +61,6 @@ I'm going to not give you copy paste commands here for obvious reasons.
 - take that source and compile it into the module file so you can open it up in toolset.
 - once you get done with all your work, save the module in toolset.
 - copy and paste the module file (or symlink) into your local copy of your forked repo.
-- run the decompile command
-- git commit and push to your repo
+- run the decompile command.
+- git commit and push to your repo.
 - once your changes are done and stable, pull request to the main repo.
