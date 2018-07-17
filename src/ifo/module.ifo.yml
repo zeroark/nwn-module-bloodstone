@@ -68,3 +68,11 @@ Mod_StartYear: {type: dword, value: 1372}
 Mod_Tag: {type: cexostr, value: MODULE}
 Mod_Version: {type: dword, value: 3}
 Mod_XPScale: {type: byte, value: 10}
+VarTable:
+  type: list
+  value:
+  - !nwn-lib.elv.es,2013-07:struct
+    __struct_id: 0
+    Name: {type: cexostr, value: X2_S_UD_SPELLSCRIPT}
+    Type: {type: dword, value: 3}
+    Value: {type: cexostr, value: X2_S_UD_SPELLSCRIPT}
