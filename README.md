@@ -50,9 +50,9 @@ ran via cmd</br>
 **help**</br>
 ```docker run --rm -it -v "%cd%:/home/devbase/build" jakkn/nwn-devbase -h```</br>
 **compile the module**</br>
-```docker run --rm -it -v "%cd%:/home/devbase/build" jakkn/nwn-devbase -h```</br>
+```docker run --rm -it -v "%cd%:/home/devbase/build" jakkn/nwn-devbase pack```</br>
 **decompile module**</br>
-```docker run --rm -it -v "%cd%:/home/devbase/build" jakkn/nwn-devbase -h```
+```docker run --rm -it -v "%cd%:/home/devbase/build" jakkn/nwn-devbase extract```
 ## Workflow
 ### getting started
 
