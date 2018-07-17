@@ -1,6 +1,6 @@
-#include "inc_server"
-#include "sfsubr_consts"
-#include "db_inc"
+#include "_server"
+#include "subrace_const"
+//#include "db_inc"
 #include "nwnx_creature"
 #include "nwnx_admin"
 
@@ -215,7 +215,7 @@ int GetHasValidFeatCount(object oPC)
     string sFeats = "";
     while(iLoop < 1074)
     {
-        if(GetHasFeat(iLoop, oPC)) 
+        if(GetHasFeat(iLoop, oPC))
         {
             iCount++;
             sFeats = sFeats + IntToString(iLoop) + ",";
@@ -223,9 +223,9 @@ int GetHasValidFeatCount(object oPC)
         iLoop++;
     }
     //check if the counted feats exceed the maximum allowed
-    if (iCount > iMaxFeats)  
+    if (iCount > iMaxFeats)
         return FALSE;
-    else  
+    else
         return TRUE;
 }
 
@@ -295,7 +295,7 @@ void SR_HackerAction(object oPC)
 {
     string sHackReason = GetDeity(oPC); //Uses the Diety field to check the character
     ExportSingleCharacter(oPC);
-    
+
     SendMessageToAllDMs(GetName(oPC) + " has an invalid character: " + sHackReason + "\nCD Key: " + GetPCPublicCDKey(oPC));
     PrintString(GetName(oPC) + " has an invalid character: " + sHackReason + "\nCD Key: " + GetPCPublicCDKey(oPC));
     WriteTimestampedLogEntry(GetName(oPC) + " has an invalid character: " + sHackReason + "\nCD Key: " + GetPCPublicCDKey(oPC));
@@ -373,6 +373,7 @@ int SR_GetIsCharacterLegal(object oPC, string sName)
     }
     else //Name is valid, check unique
     {
+        /* SQL is not being used, in theory.
         NWNX_SQL_ExecuteQuery("select logins from player where name like " + dbQuotes(GetName(oPC)));
 
         if (NWNX_SQL_ReadyToReadNextRow()) //Name created because it exists
@@ -384,6 +385,7 @@ int SR_GetIsCharacterLegal(object oPC, string sName)
                 sIllegal += "\n'Not a unique Player Name, please pick another one'";
             }
         }
+        */
     }
     if (nIllegal)
     {

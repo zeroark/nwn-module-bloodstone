@@ -1,6 +1,6 @@
 #include "subrace_funct"
 
-void LoadSubrace_UndeadHalfElf() 
+void LoadSubrace_UndeadHalfElf()
 {
     SR_CreateNewSubrace("UndeadHalfElf", APPEARANCE_TYPE_MUMMY_WARRIOR, APPEARANCE_TYPE_MUMMY_WARRIOR, "skin_undeadhe", "", "", TRUE);
     SR_SetSubraceRaceRestriction("UndeadHalfElf", ALLOW_USE_TRUE, RACE_RESTRICT_HALFELF);
@@ -9,7 +9,7 @@ void LoadSubrace_UndeadHalfElf()
     SR_SetSubraceMovementSpeed("UndeadHalfElf", 120);
 }
 
-void LoadSubrace_Ettin() 
+void LoadSubrace_Ettin()
 {
     SR_CreateNewSubrace("Ettin", APPEARANCE_TYPE_ETTIN, APPEARANCE_TYPE_ETTIN, "skin_ettin");
     SR_SetSubraceRaceRestriction("Ettin", ALLOW_USE_TRUE, RACE_RESTRICT_ELF | RACE_RESTRICT_HALFELF | RACE_RESTRICT_HUMAN);
@@ -20,7 +20,7 @@ void LoadSubrace_Ettin()
     SR_SetSubraceMovementSpeed("Ettin", 120);
 }
 
-/*void LoadSubrace_Shielddwarf() 
+/*void LoadSubrace_Shielddwarf()
 {
     SR_CreateNewSubrace("Shielddwarf", APPEARANCE_TYPE_INVALID, APPEARANCE_TYPE_INVALID, "skin_shdwarf");
     SR_SetSubraceRaceRestriction("Shielddwarf", ALLOW_USE_TRUE, RACE_RESTRICT_DWARF);
@@ -30,7 +30,7 @@ void LoadSubrace_Ettin()
     SR_SetSubraceFeat("Shielddwarf", FEAT_ALERTNESS);
 }*/
 
-void LoadSubrace_Ogre() 
+void LoadSubrace_Ogre()
 {
     SR_CreateNewSubrace("Ogre", APPEARANCE_TYPE_OGRE, APPEARANCE_TYPE_OGREB, "skin_ogre");
     SR_SetSubraceRaceRestriction("Ogre", ALLOW_USE_TRUE, RACE_RESTRICT_HALFORC);
@@ -41,7 +41,7 @@ void LoadSubrace_Ogre()
     SR_SetSubraceMovementSpeed("Ogre", 120);
 }
 
-void LoadSubrace_Seahag() 
+void LoadSubrace_Seahag()
 {
     SR_CreateNewSubrace("Seahag", APPEARANCE_TYPE_SEA_HAG, APPEARANCE_TYPE_SEA_HAG, "skin_seahag", "", "", FALSE, 19);
     SR_SetSubraceRaceRestriction("Seahag", ALLOW_USE_TRUE, RACE_RESTRICT_HALFELF | RACE_RESTRICT_HUMAN | RACE_RESTRICT_ELF);
@@ -53,7 +53,7 @@ void LoadSubrace_Seahag()
     SR_SetSubraceMovementSpeed("Seahag", 120);
 }
 
-void LoadSubrace_Gnoll() 
+void LoadSubrace_Gnoll()
 {
     SR_CreateNewSubrace("Gnoll", APPEARANCE_TYPE_GNOLL_WARRIOR, APPEARANCE_TYPE_GNOLL_WIZ, "skin_gnoll");
     SR_SetSubraceRaceRestriction("Gnoll", ALLOW_USE_TRUE, RACE_RESTRICT_HALFELF | RACE_RESTRICT_DWARF);
@@ -63,7 +63,7 @@ void LoadSubrace_Gnoll()
     SR_SetSubraceMovementSpeed("Gnoll", 120);
 }
 
-void LoadSubrace_Azer() 
+void LoadSubrace_Azer()
 {
     SR_CreateNewSubrace("Azer", APPEARANCE_TYPE_AZER_MALE, APPEARANCE_TYPE_AZER_FEMALE, "skin_azer");
     SR_SetSubraceRaceRestriction("Azer", ALLOW_USE_TRUE, RACE_RESTRICT_DWARF);
@@ -74,7 +74,7 @@ void LoadSubrace_Azer()
     SR_SetSubraceMovementSpeed("Azer", 120);
 }
 
-void LoadSubrace_Duergar() 
+void LoadSubrace_Duergar()
 {
     SR_CreateNewSubrace("Duergar", APPEARANCE_TYPE_INVALID, APPEARANCE_TYPE_INVALID, "skin_duergar");
     SR_SetSubraceRaceRestriction("Duergar", ALLOW_USE_TRUE, RACE_RESTRICT_DWARF);
@@ -84,7 +84,7 @@ void LoadSubrace_Duergar()
     SR_SetSubraceAppearanceColor("Duergar", 19, 7);
 }
 
-void LoadSubrace_ArcticDwarf() 
+void LoadSubrace_ArcticDwarf()
 {
     SR_CreateNewSubrace("ArcticDwarf", APPEARANCE_TYPE_INVALID, APPEARANCE_TYPE_INVALID, "skin_arcticdwarf");
     SR_SetSubraceRaceRestriction("ArcticDwarf", ALLOW_USE_TRUE, RACE_RESTRICT_DWARF);
@@ -96,7 +96,7 @@ void LoadSubrace_ArcticDwarf()
     SR_SetSubraceAppearanceColor("ArcticDwarf", 60, 56);
 }
 
-void LoadSubrace_Avariel() 
+void LoadSubrace_Avariel()
 {
     SR_CreateNewSubrace("Avariel", APPEARANCE_TYPE_INVALID, APPEARANCE_TYPE_INVALID, "skin_avariel");
     SR_SetSubraceRaceRestriction("Avariel", ALLOW_USE_TRUE, RACE_RESTRICT_ELF | RACE_RESTRICT_HALFELF);
@@ -107,7 +107,7 @@ void LoadSubrace_Avariel()
 
 }
 
-void LoadSubrace_Drow() 
+void LoadSubrace_Drow()
 {
     SR_CreateNewSubrace("Drow", APPEARANCE_TYPE_INVALID, APPEARANCE_TYPE_INVALID, "skin_drow");
     SR_SetSubraceRaceRestriction("Drow", ALLOW_USE_TRUE, RACE_RESTRICT_ELF | RACE_RESTRICT_HALFELF);
@@ -118,7 +118,7 @@ void LoadSubrace_Drow()
     SR_SetSubraceAppearanceColor("Drow", 43, 56);
 }
 
-void LoadSubrace_Darkelf() 
+void LoadSubrace_Darkelf()
 {
     SR_CreateNewSubrace("Darkelf", APPEARANCE_TYPE_INVALID, APPEARANCE_TYPE_INVALID, "skin_darkelf");
     SR_SetSubraceRaceRestriction("Darkelf", ALLOW_USE_TRUE, RACE_RESTRICT_ELF | RACE_RESTRICT_HALFELF);
@@ -128,7 +128,7 @@ void LoadSubrace_Darkelf()
     SR_SetSubraceFeat("Darkelf", FEAT_ALERTNESS);
 }
 
-void LoadSubrace_Dopkalfar() 
+void LoadSubrace_Dopkalfar()
 {
     SR_CreateNewSubrace("Dopkalfar", APPEARANCE_TYPE_INVALID, APPEARANCE_TYPE_INVALID, "skin_dopkalfar");
     SR_SetSubraceAppearanceColor("Dopkalfar", 60, 56);
@@ -140,7 +140,7 @@ void LoadSubrace_Dopkalfar()
 }
 
 
-void LoadSubrace_Ljosalfar() 
+void LoadSubrace_Ljosalfar()
 {
     SR_CreateNewSubrace("Ljosalfar", APPEARANCE_TYPE_INVALID, APPEARANCE_TYPE_INVALID, "skin_ljosalfar");
     SR_SetSubraceAppearanceColor("Ljosalfar", 14, 49);
@@ -187,7 +187,7 @@ void LoadSubrace_Aasimar()
     SR_SetSubraceFeat("Aasimar", FEAT_ALERTNESS);
 }
 
-void LoadSubrace_Tiefling() 
+void LoadSubrace_Tiefling()
 {
     SR_CreateNewSubrace("Tiefling", APPEARANCE_TYPE_INVALID, APPEARANCE_TYPE_INVALID, "skin_tiefling");
     SR_AdjustSubraceStats("Tiefling", -2, 2, -2, 2, 0, 0);
@@ -199,7 +199,7 @@ void LoadSubrace_Tiefling()
 /////////////////// Cory New Subraces /////////////////////////
 
 /// Humans ///
-void LoadSubrace_EarthGenasi() 
+void LoadSubrace_EarthGenasi()
 {
     SR_CreateNewSubrace("EarthGenasi", APPEARANCE_TYPE_INVALID, APPEARANCE_TYPE_INVALID, "skin_earthgenasi");
     SR_SetSubraceRaceRestriction("EarthGenasi", ALLOW_USE_TRUE, RACE_RESTRICT_HUMAN);
@@ -209,7 +209,7 @@ void LoadSubrace_EarthGenasi()
     SR_SetSubraceFeat("EarthGenasi", FEAT_ALERTNESS);
 }
 
-void LoadSubrace_WaterGenasi() 
+void LoadSubrace_WaterGenasi()
 {
     SR_CreateNewSubrace("WaterGenasi", APPEARANCE_TYPE_INVALID, APPEARANCE_TYPE_INVALID, "skin_watergenasi");
     SR_SetSubraceRaceRestriction("WaterGenasi", ALLOW_USE_TRUE, RACE_RESTRICT_HUMAN);
@@ -221,7 +221,7 @@ void LoadSubrace_WaterGenasi()
 
 /// Half-Orcs ///
 
-void LoadSubrace_MountainOrc() 
+void LoadSubrace_MountainOrc()
 {
     SR_CreateNewSubrace("MountainOrc", APPEARANCE_TYPE_INVALID, APPEARANCE_TYPE_INVALID, "skin_mountainorc");
     SR_SetSubraceRaceRestriction("MountainOrc", ALLOW_USE_TRUE, RACE_RESTRICT_HALFORC);
@@ -229,7 +229,7 @@ void LoadSubrace_MountainOrc()
     SR_SetSubraceFeat("MountainOrc", FEAT_ALERTNESS);
 }
 
-void LoadSubrace_Ondonti() 
+void LoadSubrace_Ondonti()
 {
     SR_CreateNewSubrace("Ondonti", APPEARANCE_TYPE_INVALID, APPEARANCE_TYPE_INVALID, "skin_odnonti");
     SR_SetSubraceRaceRestriction("Ondonti", ALLOW_USE_TRUE, RACE_RESTRICT_HALFORC);
@@ -239,7 +239,7 @@ void LoadSubrace_Ondonti()
 
 // Gnomes ///
 
-void LoadSubrace_RockGnome() 
+void LoadSubrace_RockGnome()
 {
     SR_CreateNewSubrace("RockGnome", APPEARANCE_TYPE_INVALID, APPEARANCE_TYPE_INVALID, "skin_rockgnome");
     SR_SetSubraceRaceRestriction("RockGnome", ALLOW_USE_TRUE, RACE_RESTRICT_GNOME);
@@ -247,7 +247,7 @@ void LoadSubrace_RockGnome()
     SR_SetSubraceFeat("RockGnome", FEAT_ALERTNESS);
 }
 
-void LoadSubrace_DeepGnome() 
+void LoadSubrace_DeepGnome()
 {
     SR_CreateNewSubrace("DeepGnome", APPEARANCE_TYPE_INVALID, APPEARANCE_TYPE_INVALID, "skin_deepgnome");
     SR_SetSubraceRaceRestriction("DeepGnome", ALLOW_USE_TRUE, RACE_RESTRICT_GNOME);
