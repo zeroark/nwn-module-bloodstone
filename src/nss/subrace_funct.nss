@@ -11,7 +11,6 @@
 */
 //:://////////////////////////////////////////////
 
-#include "sfsubr_leto_inc"
 #include "_functions"
 #include "nwnx_creature"
 #include "inc_traininghall"

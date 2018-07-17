@@ -1,5 +1,4 @@
-#include "_inc_despawn"
-#include "inc_server"
+#include "_server"
 #include "nwnx_creature"
 
 const int BIT1  =           1;
@@ -70,7 +69,7 @@ void CloseDoorDelay(object oObject, float fDelay);
 // Get the object with the specified tag.
 // * Returns OBJECT_INVALID if the object cannot be found.
 // oStored is the Object where LocalVariable is stored as cache
-object DefGetObjectByTag(string sTag, object oStored=OBJECT_SELF);
+object DefGetObjectByTag(string sTag, object oStored = OBJECT_SELF);
 
 // Get the Baseitemtype-Name of oItem (It use 2da file)
 string GetNameByBaseItemType2da(int nBaseItemType);
@@ -78,6 +77,7 @@ string GetNameByBaseItemType2da(int nBaseItemType);
 // XP Bonus is the multiplier, set to 2 for double XP, 3 for triple ...
 void ActionCreateObject(int nObjectType, string sTemplate, location lLocation, int bUseAppearAnimation=FALSE, string sNewTag="", int nXpBonus = FALSE, int nDespawn = FALSE);
 void DoFlameOfLife(object oTarget);
+
 // oPC = The pc that is checked, oArea = his current Area, fDist = the distance to check for enemies
 int GetIsHostilePcNearby(object oPC, object oArea, float fDist, int nCheckLevel = 0);
 
@@ -322,8 +322,10 @@ int GetIsHostilePcNearby(object oPC, object oArea, float fDist, int nCheckLevel 
     {
         if (oPC != oEnemy)
         {
-            if (GetArea(oEnemy) != oArea) return FALSE;
-            if (GetDistanceBetween(oPC, oEnemy) > fDist) return FALSE;
+            if (GetArea(oEnemy) != oArea) 
+                return FALSE;
+            if (GetDistanceBetween(oPC, oEnemy) > fDist) 
+                return FALSE;
 
             if (GetIsReactionTypeHostile(oPC, oEnemy))
             {
@@ -332,12 +334,11 @@ int GetIsHostilePcNearby(object oPC, object oArea, float fDist, int nCheckLevel 
                     if (abs(GetHitDice(oEnemy) - GetHitDice(oPC)) <= nCheckLevel) // effortless
                     {
                         if (GetCurrentHitPoints(oEnemy) > 0)
-                        {
                             return TRUE;
-                        }
                     }
                 }
-                else return TRUE;
+                else 
+                    return TRUE;
             }
         }
         nCnt++;
