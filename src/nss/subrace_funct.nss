@@ -13,7 +13,7 @@
 
 #include "_functions"
 #include "nwnx_creature"
-#include "inc_traininghall"
+#include "subrace_const"
 
 
 object oStorer = GetModule();
@@ -21,8 +21,8 @@ object oStorer = GetModule();
 void ClearSubRace(object oPC, string sFrom)
 {
     string sSubRace = GetSubRace(oPC);
-    if (sSubRace! = "")
-    {      
+    if (sSubRace != "")
+    {
         SetSubRace(oPC, "");
     }
 }
@@ -550,6 +550,7 @@ void SR_SetSubraceEquipmentRestriction(string sSubrace, int bAllowUseEquipment, 
 
 void SR_SetSubraceSkill(string subraceName, int SkillID, int iModifier, int Level = 1, int Set = FALSE)
 {
+   /* Convert to NWNX
    subraceName = GetStringLowerCase(subraceName);
    string SubraceTag = SUBRACE_TAG + "_" + subraceName;
    SubraceTag = SubraceTag + "_" + IntToString(Level);
@@ -559,6 +560,7 @@ void SR_SetSubraceSkill(string subraceName, int SkillID, int iModifier, int Leve
    SetLocalGroupFlagValue(oStorer, SubraceTag + "_" + IntToString(SkillCount) + "_" + SUBRACE_BONUS_SKILL_FLAGS, Set, SUBRACE_BONUS_SKILL_REMOVE_FLAG);
    SetLocalGroupFlagValue(oStorer, SubraceTag + "_" + IntToString(SkillCount) + "_" + SUBRACE_BONUS_SKILL_FLAGS, iModifier, SUBRACE_BONUS_SKILL_MODIFIER_FLAG);
    SetLocalInt(oStorer, SubraceTag + "_" + SUBRACE_BONUS_SKILL_COUNT, SkillCount);
+   */
 }
 
 void SR_AdjustSubraceStats(string sSubrace, int nSTR, int nDEX, int nCON, int nINT, int nWIS, int nCHA)
@@ -631,7 +633,7 @@ void SR_ApplySubraceItems(object oPC, string sSubrace)
     object oClaw2 = GetItemInSlot(INVENTORY_SLOT_CWEAPON_R, oPC);
 
     string sSubrace = GetStringUpperCase(GetSubRace(oPC));
-    if (sSubrace == "") 
+    if (sSubrace == "")
         return;
 
     int nHasHideAllready;
@@ -909,7 +911,6 @@ int SR_GetIsRaceValid(object oPC, string sSubrace)
 
 int SR_SubraceOnEnter(object oPC)
 {
-    LetoPCEnter(oPC);
     string sSubrace = GetStringUpperCase(GetSubRace(oPC));
 
     SR_CapitalizeSubraceName(oPC);
@@ -984,7 +985,6 @@ int SR_SubraceOnEnter(object oPC)
 
 void SR_SubraceOnExit(object oPC)
 {
-    LetoPCExit(oPC);
 }
 
 int SR_GetIsAlignmentValid(object oPC, string sSubrace)
